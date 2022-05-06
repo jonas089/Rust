@@ -28,21 +28,17 @@ When the function is over, those values get popped off the stack.
 
 ## Copies of Variables
 
-<code>
   let s1 = String::from("hello");
   let s2 = s1;
   println!("{}, world!", s1);
-</code>
 
 s1 is now invalid and s2 becomes the only reference to the data on the heap.
 
 -----
 
-<code>
   let x = 5;
   let y = x;
   println!("x = {}, y = {}", x, y);
-</code>
 
 types such as integers that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make. That means there’s no reason we would want to prevent x from being valid after we create the variable y.
 
@@ -58,40 +54,37 @@ Tuples, if they only contain types that also implement Copy. For example, (i32, 
 
 ## Returning a tuple ( multiple values )
 
-<code>
   fn main() {
       let s1 = String::from("hello");
       let (s2, len) = calculate_length(s1);
       println!("The length of '{}' is {}.", s2, len);
   }
-</code>
 
-<code>
+
   fn calculate_length(s: String) -> (String, usize) {
       let length = s.len(); // len() returns the length of a String
       (s, length)
   }
-</code>
 
 ## References and Borrowing
 
 Reference to an object as a parameter instead of taking ownership of the value of the object. / s1 "survives" the entire scope.
 
-<code>
+
   fn main() {
       let s1 = String::from("hello");
       let len = calculate_length(&s1);
       println!("The length of '{}' is {}.", s1, len);
   }
-</code>
 
-<code>
+
+
   fn calculate_length(s: &String) -> usize {
       s.len()
   }
-</code>
 
-### &String
+
+### &String  <br>
 
 The &s1 syntax refers to the value of s1, without overtaking ownership. => The value will not be dropped and is still owned by variable s1.
 
@@ -99,18 +92,18 @@ The &s1 syntax refers to the value of s1, without overtaking ownership. => The v
 
 ### Mutable References
 
-<code>
-fn main() {
-    let mut s = String::from("hello");
-    change(&mut s);
-}
-</code>
 
-<code>
-fn change(some_string: &mut String) {
-    some_string.push_str(", world");
-}
-</code>
+  fn main() {
+      let mut s = String::from("hello");
+      change(&mut s);
+  }
+
+
+
+  fn change(some_string: &mut String) {
+      some_string.push_str(", world");
+  }
+
 
 There can only be one mutable reference to a piece of data at a time.
 
@@ -118,25 +111,25 @@ There can not be a mutable and an immutable reference at the same time.
 
 ### Multiple Mutable References ( not simultaneous )
 
-<code>
-let mut s = String::from("hello");
-{
-    let r1 = &mut s;
-} // r1 goes out of scope here, so we can make a new reference with no problems.
-let r2 = &mut s;
-</code>
+
+  let mut s = String::from("hello");
+  {
+      let r1 = &mut s;
+  } // r1 goes out of scope here, so we can make a new reference with no problems.
+  let r2 = &mut s;
+
 
 Another example on mutable and immutable references that is OK:
 
-<code>
-let mut s = String::from("hello");
-let r1 = &s; // no problem
-let r2 = &s; // no problem
-println!("{} and {}", r1, r2);
-// variables r1 and r2 will not be used after this point
-let r3 = &mut s; // no problem
-println!("{}", r3);
-</code>
+
+  let mut s = String::from("hello");
+  let r1 = &s; // no problem
+  let r2 = &s; // no problem
+  println!("{} and {}", r1, r2);
+  // variables r1 and r2 will not be used after this point
+  let r3 = &mut s; // no problem
+  println!("{}", r3);
+
 
 ##
 
