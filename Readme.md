@@ -137,3 +137,5 @@ println!("{} and {}", r1, r2);
 let r3 = &mut s; // no problem
 println!("{}", r3);
 </code>
+
+# To Mark: Currently on Chapter 4.2
