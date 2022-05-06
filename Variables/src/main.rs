@@ -1,22 +1,11 @@
 fn main() {
-    //let x = plus_one(5);
-    //println!("The value of x is: {}", x);
-    //reverser(5);
-    Ownership();
-}
-fn plus_one(x:i32) -> i32{
-    x + 1
-}
-fn reverser(y:i32){
-    for number in (1..y).rev(){
-        println!("{}!", number);
-    }
-    println!("Done!");
-}
-fn Ownership(){
-    let mut r = "hello";
-    let mut s = String::from(r);
-    s.push_str(", world!");
-    println!("{}",s);
+    let s1 = String::from("hello");
 
+    let len = calculate_length(&s1); //
+
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
 }
