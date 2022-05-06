@@ -1,9 +1,9 @@
 # Cargo Commands
 
-cargo new -> create cargo tree
-cargo build  -> compile cargo project
-cargo run -> compile and run cargo project
-cargo check -> check if code can be compiled ( faster than compiling )
+cargo new -> create cargo tree \
+cargo build  -> compile cargo project \
+cargo run -> compile and run cargo project \
+cargo check -> check if code can be compiled ( faster than compiling ) \
 
 
 # Chapter 4 - Ownership
@@ -129,6 +129,9 @@ Another example on mutable and immutable references that is OK:
   let r3 = &mut s; // no problem
   println!("{}", r3);
 ```
-##
 
-# To Mark: Currently on Chapter 4.2
+
+
+# To Mark: Currently on Chapter 4.3
+## Latest Changes:
++ String slicing example in Small_Practicals \
