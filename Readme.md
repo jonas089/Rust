@@ -30,12 +30,13 @@ When the function is over, those values get popped off the stack.
 
 <code>
   let s1 = String::from("hello");
-
+</code>
+<code>
   let s2 = s1;
-
+</code>
+<code>
   println!("{}, world!", s1);
 </code>
-
 s1 is now invalid and s2 becomes the only reference to the data on the heap.
 
 -----
