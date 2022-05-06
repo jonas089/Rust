@@ -42,9 +42,7 @@ s1 is now invalid and s2 becomes the only reference to the data on the heap.
 
 <code>
   let x = 5;
-  <br>
   let y = x;
-  <br>
   println!("x = {}, y = {}", x, y);
 </code>
 
@@ -141,5 +139,7 @@ println!("{} and {}", r1, r2);
 let r3 = &mut s; // no problem
 println!("{}", r3);
 </code>
+
+##
 
 # To Mark: Currently on Chapter 4.2
