@@ -3,7 +3,7 @@
 cargo new -> create cargo tree \
 cargo build  -> compile cargo project \
 cargo run -> compile and run cargo project \
-cargo check -> check if code can be compiled ( faster than compiling ) \
+cargo check -> check if code can be compiled ( faster than compiling )
 
 
 # Chapter 4 - Ownership
@@ -130,8 +130,76 @@ Another example on mutable and immutable references that is OK:
   println!("{}", r3);
 ```
 
+# Chapter 5 - Use of Structs to structure related data
 
+## Declare a Struct
 
-# To Mark: Currently on Chapter 5.1
+A Struct can be instantiated, the way it is instantiated doesn't look too different from a python class.
+
+```python
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+}
+```
+
+## Create an instance of the Struct
+
+```python
+fn main() {
+    let user1 = User {
+        email: String::from("someone@example.com"),
+        username: String::from("someusername123"),
+        active: true,
+        sign_in_count: 1,
+    };
+}
+```
+
+## Create multiple instances of a struct
+
+```python
+fn build_user(email: String, username: String) -> User {
+    User {
+        email,
+        username,
+        active: true,
+        sign_in_count: 1,
+    }
+}
+```
+
+The ..user1 states, that every undefined field's value is set to have the same value as the field of the given instance (user1)
+
+```python
+fn main() {
+    // --snip--
+
+    let user2 = User {
+        email: String::from("another@example.com"),
+        ..user1
+    };
+}
+```
+The email of user2 is different to that of user1, but username etc. are the same.
+
+## Tuple structs
+```python
+struct Color(i32, i32, i32);
+struct Point(i32, i32, i32);
+
+fn main() {
+    let black = Color(0, 0, 0);
+    let origin = Point(0, 0, 0);
+}
+```
+
+## References and Lifetime (foreshadowing)
+Keep in mind that a struct containing an &str Reference may become invalid as memory is cleared.
+We'll get back to this in chapter 10 and learn about "Lifetime".
+
+# To Mark: Currently on Chapter 5.2
 ## Latest Changes:
-+ Finished 4.3 - Slices
++ Finished 5.1 - Defining and Instantiating Structs
