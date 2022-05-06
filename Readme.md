@@ -134,4 +134,3 @@ Another example on mutable and immutable references that is OK:
 
 # To Mark: Currently on Chapter 4.3
 ## Latest Changes:
-+ String slicing example in Small_Practicals \
