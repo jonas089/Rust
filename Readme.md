@@ -26,28 +26,61 @@ When the function is over, those values get popped off the stack.
 
 # Copies of Variables
 
+<code>
 let s1 = String::from("hello");
 let s2 = s1;
 
 println!("{}, world!", s1);
-
+</code>
 s1 is now invalid and s2 becomes the only reference to the data on the heap.
 
 -----
-
+<code>
 let x = 5;
 let y = x;
 
 println!("x = {}, y = {}", x, y);
-
+</code>
 types such as integers that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make. That means there’s no reason we would want to prevent x from being valid after we create the variable y.
 
 -----
 
-# "Copy"
+## "Copy"
 
 All the integer types, such as u32.
 The Boolean type, bool, with values true and false.
 All the floating point types, such as f64.
 The character type, char.
 Tuples, if they only contain types that also implement Copy. For example, (i32, i32) implements Copy, but (i32, String) does not.
+
+# Returning a tuple ( multiple values )
+<code>
+fn main() {
+    let s1 = String::from("hello");
+
+    let (s2, len) = calculate_length(s1);
+
+    println!("The length of '{}' is {}.", s2, len);
+}
+
+fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len(); // len() returns the length of a String
+
+    (s, length)
+}
+</code>
+
+## Returning the same tuple using a Reference
+<code>
+fn main() {
+    let s1 = String::from("hello");
+
+    let len = calculate_length(&s1); //
+
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+</code>
