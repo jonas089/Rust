@@ -31,7 +31,6 @@ When the function is over, those values get popped off the stack.
 <code>
   let s1 = String::from("hello");
   let s2 = s1;
-
   println!("{}, world!", s1);
 </code>
 
@@ -42,7 +41,6 @@ s1 is now invalid and s2 becomes the only reference to the data on the heap.
 <code>
   let x = 5;
   let y = x;
-
   println!("x = {}, y = {}", x, y);
 </code>
 
@@ -63,9 +61,7 @@ Tuples, if they only contain types that also implement Copy. For example, (i32, 
 <code>
   fn main() {
       let s1 = String::from("hello");
-
       let (s2, len) = calculate_length(s1);
-
       println!("The length of '{}' is {}.", s2, len);
   }
 </code>
@@ -73,7 +69,6 @@ Tuples, if they only contain types that also implement Copy. For example, (i32, 
 <code>
   fn calculate_length(s: String) -> (String, usize) {
       let length = s.len(); // len() returns the length of a String
-
       (s, length)
   }
 </code>
@@ -85,9 +80,7 @@ Reference to an object as a parameter instead of taking ownership of the value o
 <code>
   fn main() {
       let s1 = String::from("hello");
-
-      let len = calculate_length(&s1); //
-
+      let len = calculate_length(&s1);
       println!("The length of '{}' is {}.", s1, len);
   }
 </code>
@@ -109,7 +102,6 @@ The &s1 syntax refers to the value of s1, without overtaking ownership. => The v
 <code>
 fn main() {
     let mut s = String::from("hello");
-
     change(&mut s);
 }
 </code>
@@ -128,11 +120,9 @@ There can not be a mutable and an immutable reference at the same time.
 
 <code>
 let mut s = String::from("hello");
-
 {
     let r1 = &mut s;
 } // r1 goes out of scope here, so we can make a new reference with no problems.
-
 let r2 = &mut s;
 </code>
 
@@ -140,12 +130,10 @@ Another example on mutable and immutable references that is OK:
 
 <code>
 let mut s = String::from("hello");
-
 let r1 = &s; // no problem
 let r2 = &s; // no problem
 println!("{} and {}", r1, r2);
 // variables r1 and r2 will not be used after this point
-
 let r3 = &mut s; // no problem
 println!("{}", r3);
 </code>
