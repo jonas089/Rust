@@ -200,6 +200,33 @@ fn main() {
 Keep in mind that a struct containing an &str Reference may become invalid as memory is cleared.
 We'll get back to this in chapter 10 and learn about "Lifetime".
 
-# To Mark: Currently on Chapter 5.2
+## {:?}, var
+:? inside the curly brackets tells println! to use an output format called Debug. This would for exmple also print
+the values of a struct ( which is useful for debugging ).
+{:#?} prints output that is easier to read.
+
+## dbg! macro
+#[derive(Debug)]
+
+```python
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+fn main() {
+    let scale = 2;
+    let rect1 = Rectangle {
+        width: dbg!(30 * scale),
+        height: 50,
+    };
+
+    dbg!(&rect1);
+}
+```
+dbg! returns ownership of the assigned value
+
+# To Mark: Currently on Chapter 5.3,
+most coding examples i've done are in Small_Practicals/src/main.rs
 ## Latest Changes:
-+ Finished 5.1 - Defining and Instantiating Structs
++ Finished 5.2

@@ -34,3 +34,62 @@ fn first_word(s:&String) -> &str {
     &s[..]
 }
 */
+
+///////////////////////////////////
+
+/* Eample 1 - Function with Struct.
+fn main() {
+    let width1 = 30;
+    let height1 = 50;
+    let depth1 = 10;
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        area(width1, height1)
+    );
+    println!(
+        "The volume of the block is {} m^3 pixels.",
+        volume(width1,height1,depth1)
+    );
+}
+
+fn area(width: u32, height: u32) -> u32 {
+    width * height
+}
+fn volume(width:u32, height:u32, depth:u32) -> u32{
+    width*height*depth
+}
+*/
+/* Example 2 - make use of tuples.
+fn main(){
+    let rect1 = (30,50);
+    println!(
+        "The are of the rect is {} square pixels.",
+        area(rect1)
+    );
+}
+fn area(dimensions:(u32, u32)) -> u32 {
+    dimensions.0 * dimensions.1
+}
+*/
+/* Example 3 - label data.
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+fn main() {
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        area(&rect1)
+    );
+}
+
+fn area(rectangle: &Rectangle) -> u32 {
+    rectangle.width * rectangle.height
+}
+*/
