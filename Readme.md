@@ -246,8 +246,9 @@ Reason to use impl blocks:
 "We’ve put all the things we can do with an instance of a type in one impl block rather than making future users of our code search for capabilities of Rectangle in various places in the library we provide"
 
 
-
-# To Mark: Currently on Chapter 5.3,
+# To Mark: Currently on Chapter 6.1
 most coding examples i've done are in Small_Practicals/src/main.rs
 ## Latest Changes:
-+ Finished 5.2
++ Finished Chapter 5.3 -> moving on to Chapter 6.
++ Experimented with if and else statements, as well as the && and || operator. I have some experience with this already, as I am used to coding in C#.
++ Learned that there can be multiple impl blocks for the same function, but it doesn't always make sense to declare multiple impl blocks. We'll learn about situations where it does make sense in Chapter 10.

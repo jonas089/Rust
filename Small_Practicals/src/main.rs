@@ -95,7 +95,7 @@ fn area(rectangle: &Rectangle) -> u32 {
 */
 
 ///////////////////////////////////
-
+/* Method Syntax - Example 1
 #[derive(Debug)]
 struct Rectangle{
     width:u32,
@@ -115,5 +115,49 @@ fn main(){
         height:50
     };
     println!("The Area of the rectangle is {} square pixels", rect1.area());
-    println!("Rectange has width: {}", rect1.has_width());
+    println!("Rectangle has width: {}", rect1.has_width());
+}
+*/
+
+/* Method Syntax - Example 2*/
+struct Rectangle{
+    width:u32,
+    height:u32
+}
+
+impl Rectangle{
+    fn area(&self) -> u32{
+        self.width * self.height
+    }
+    fn can_hold(&self, other: &Rectangle) -> bool{
+        self.width > other.width && self.height > other.height
+    }
+}
+
+fn main(){
+    let rect1 = Rectangle{
+        width:50,
+        height:30
+    };
+    let rect2 = Rectangle{
+        width:20,
+        height:10
+    };
+    let rect3 = Rectangle{
+        width:15,
+        height:100
+    };
+    println!("Can rect1 HODL rect2? {}", rect1.can_hold(&rect2));
+    println!("Can rect1 HODL rect3? {}", rect1.can_hold(&rect3));
+
+    println!("{}", Testing_Syntax())
+}
+
+
+fn Testing_Syntax() -> bool{
+    let mut is_true:bool = false;
+    if(8==16) || (8==7){
+        is_true = true;
+    }
+    is_true
 }
