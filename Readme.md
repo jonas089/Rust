@@ -298,7 +298,9 @@ Only when we have an Option<i8>, Option<&str> (or whatever type of value we’re
 
 
 
-# To Mark: Currently on Chapter 6.1
+# To Mark: Currently on Chapter 6.2
 most coding examples i've done are in Small_Practicals/src/main.rs
 ## Latest Changes:
-learned to use enums together with structs and worked through some additional tutorial.
++ combined use of enums and structs
++ Finished Chapter 6.1
++ additional coding examples for Enumerators and Structs & in depth research on the topic.
