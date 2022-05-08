@@ -245,10 +245,60 @@ We use &self here, as we don't want to take ownership / we only want to read the
 Reason to use impl blocks:
 "We’ve put all the things we can do with an instance of a type in one impl block rather than making future users of our code search for capabilities of Rectangle in various places in the library we provide"
 
+# Chapter 6 - Enums and Pattern Matching
+
+Enumerations (dt. Aufzählungen) allow you to define a type by enumerating its possible variants (e.g. IPV4 and IPV6 addresses).
+
+## Defining an Enum
+```python
+enum IpAddrKind {
+    V4,
+    V6,
+}
+```
+ipAddrKind is now a custom data type that we can use elsewhere in the code.
+
+```python
+enum IpAddr {
+    V4(String),
+    V6(String),
+}
+
+let home = IpAddr::V4(String::from("127.0.0.1"));
+
+let loopback = IpAddr::V6(String::from("::1"));
+```
+-> the name of each Enum variant also become a function that constructs an instance of the enum.
+IpAddr::V4() is a function call that takes a String argument and returns an Instance of type IpAddr.
+
+## Advantage of Enums over Structs
+
+Example: IP - addresses.
+
+If we want to instantiate an IPV4 address by splitting it up in 4 "u8" values, but instantiate / express V6 addresses in a string format, we can not do so with a single struct.
+
+However, this can be achieved using an Enumerator:
+
+```python
+enum IpAddr {
+    V4(u8, u8, u8, u8),
+    /*u8: 8bit integer, unsigned(positive).*/
+    V6(String),
+}
+
+let home = IpAddr::V4(127, 0, 0, 1);
+
+let loopback = IpAddr::V6(String::from("::1"));
+```
+
+## Option Type
+Only when we have an Option<i8>, Option<&str> (or whatever type of value we’re working with) do we have to worry about possibly not having a value
+
+
+
+
 
 # To Mark: Currently on Chapter 6.1
 most coding examples i've done are in Small_Practicals/src/main.rs
 ## Latest Changes:
-+ Finished Chapter 5.3 -> moving on to Chapter 6.
-+ Experimented with if and else statements, as well as the && and || operator. I have some experience with this already, as I am used to coding in C#.
-+ Learned that there can be multiple impl blocks for the same function, but it doesn't always make sense to declare multiple impl blocks. We'll learn about situations where it does make sense in Chapter 10.
+learned to use enums together with structs and worked through some additional tutorial.
