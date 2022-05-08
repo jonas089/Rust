@@ -226,6 +226,27 @@ fn main() {
 ```
 dbg! returns ownership of the assigned value
 
+## Method Syntax
+To define a function within the context of a struct, start an impl block for the context:
+```python
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+```
+We use &self here, as we don't want to take ownership / we only want to read the data in the struct, not write to it.
+
+Reason to use impl blocks:
+"We’ve put all the things we can do with an instance of a type in one impl block rather than making future users of our code search for capabilities of Rectangle in various places in the library we provide"
+
+
+
 # To Mark: Currently on Chapter 5.3,
 most coding examples i've done are in Small_Practicals/src/main.rs
 ## Latest Changes:
