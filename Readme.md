@@ -293,14 +293,77 @@ let loopback = IpAddr::V6(String::from("::1"));
 
 ## Option Type
 Only when we have an Option<i8>, Option<&str> (or whatever type of value we’re working with) do we have to worry about possibly not having a value
+The Option type is used to handle a scenario where a value could be something or nothing.
+" In short, because Option<T> and T (where T can be any type) are different types, the compiler won’t let us use an Option<T> value as if it were definitely a valid value. "
+Example:
+```python
+let x: i8 = 5;
+let y: Option<i8> = Some(5);
+
+let sum = x + y;
+```
+This won't compile, because y has a different type to x and the compiler won't compute different types in a calculation like this.
+
+Before we can use the Option type value, we need to handle the type mismatch. We can use the match expression to do so.
+
+## The Match Control Flow Construct
+
+When using match take care of all cases:
+```python
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
+}
+let five = Some(5);
+let six = plus_one(five);
+let none = plus_one(None);
+```
+placeholder _ if no value required:
+```python
+use std::io;
+fn main(){
+    let dice_roll = 9;
+
+    match dice_roll{
+        3 => add_fancy_hat(),
+        7 => remove_fancy_hat(),
+        other => move_player(other) # _ => reroll(), use placeholder, as value isn't needed.
+    }
+}
+```
+## Concise Control Flow with if let.
+Option<T> is the way to handle exceptions in Rust. Equivalent in python would be try: except:
+
+Useful Example:
+
+```python
+use std::collections::HashMap;
+
+fn print_inventory(book_name: &str, book: Option<&u32>) {
+    match book {
+        Some(number) => println!("There are {} copies of {}", number, book_name),
+        None         => println!("{} is out of stock :(", book_name)
+    }
+}
+
+fn main() {
+    let mut books: HashMap<&str, u32> = HashMap::new();
+    books.insert("A silent voice", 5);
+
+    // HashMap<&str, u32>::get() returns an Option<u32> (32-bit unsigned integer).
+    let a_silent_voce = books.get("A silent voice");
+    print_inventory("A silent voice", a_silent_voce);
+
+    let spice_and_wolf = books.get("Spice and Wolf");
+    print_inventory("Spice and Wolf", spice_and_wolf);
+}
+```
 
 
-
-
-
-# To Mark: Currently on Chapter 6.2
+# To Mark: Currently on Chapter 7.1
 most coding examples i've done are in Small_Practicals/src/main.rs
 ## Latest Changes:
-+ combined use of enums and structs
-+ Finished Chapter 6.1
-+ additional coding examples for Enumerators and Structs & in depth research on the topic.
++ handling excpetions using if let.
++ Finished Chapter 6.3 / moving on to 7.

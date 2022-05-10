@@ -305,6 +305,7 @@ fn main(){
 */
 
 // How to use an enum with a struct
+/*
 #[derive(Debug)]
 enum Gender{
     Male,
@@ -329,4 +330,89 @@ fn main(){
     println!("Player2: {:#?}", player_2);
 
     println!("{}", player_1.name)
+}
+*/
+
+// Option type is used to handle a value that could be something or nothing.
+
+/*
+enum Option<T>{
+    None,
+    Some(T)
+}
+
+fn main(){
+    let some_number = Some(5);
+    let some_string = Some("a string");
+    let absent_number:Option<i32> = None;
+}
+*/
+
+/* MATCH
+use std::io;
+// Example Match / Option(T)
+// Match Control Flow Constant
+/*enum Option<T>{
+    None,
+    Some(T)
+}*/
+fn plus_one(x:Option<i32>) -> Option<i32>{
+    match x {
+        None => None,
+        Some(i) => Some(i+1)
+    }
+}
+fn process_value(x:Option<i32>) -> Option<i32>{
+    match x{
+        None => None,
+        Some(x) => Some(x*2)
+    }
+}
+fn main(){
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+    let five = process_value(Some(5));
+    println!("{:?} {:?}", six, five);
+}
+
+*/
+
+/*
+// Catch-all Patterns and the _ Placeholder.
+use std::io;
+fn main(){
+    let dice_roll = 9;
+
+    match dice_roll{
+        3 => add_fancy_hat(),
+        7 => remove_fancy_hat(),
+        other => move_player(other) // _ => reroll(), use placeholder, as value isn't needed.
+    }
+}
+fn add_fancy_hat(){
+
+}
+fn remove_fancy_hat(){
+
+}
+fn move_player(num_spaces:u8){
+
+}
+*/
+use std::io;
+fn main(){
+
+    let config_max = Some(3.3f64);
+    match config_max{
+        Some(max) => println!("The maximum is configured to be {}", max),
+        _ => (),
+    }
+
+    /*
+    let config_max = Some(3u8);
+    if let Some(max) = config_max{
+        println!("The maximum is configured to be {}", max);
+    }
+    */
 }
