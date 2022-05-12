@@ -360,10 +360,20 @@ fn main() {
     print_inventory("Spice and Wolf", spice_and_wolf);
 }
 ```
+# Chapter 7 - Managing Growing Projects with Packages, Crates and Modules
+
+## Dependencies
+Dependencies in Cargo.toml
+Example:
+```python
+[dependencies]
+rand = "0.8.3" # same as ^0.8.3. Any version that is at least 0.8.3, but below 0.9.0
+
+# Dependencies: External crates that the project depends on.
+```
 
 
-# To Mark: Currently on Chapter 7.1
+# To Mark: Currently on Chapter 7.2
 most coding examples i've done are in Small_Practicals/src/main.rs
 ## Latest Changes:
-+ handling excpetions using if let.
-+ Finished Chapter 6.3 / moving on to 7.
++ read through Chapter 7.1
