@@ -371,9 +371,32 @@ rand = "0.8.3" # same as ^0.8.3. Any version that is at least 0.8.3, but below 0
 
 # Dependencies: External crates that the project depends on.
 ```
+## Modules
+Example: ./restaurant
+Libraries can help programmers to find related functions or structs faster. Modules are defined in libraries.
+
+code:
+```python
+mod front_of_house {
+    mod hosting {
+        fn add_to_waitlist() {}
+
+        fn seat_at_table() {}
+    }
+
+    mod serving {
+        fn take_order() {}
+
+        fn serve_order() {}
+
+        fn take_payment() {}
+    }
+}
+```
 
 
-# To Mark: Currently on Chapter 7.2
+
+# To Mark: Currently on Chapter 7.3
 most coding examples i've done are in Small_Practicals/src/main.rs
 ## Latest Changes:
-+ read through Chapter 7.1
++ Understood the introduction to Libraries and Moules (read and copied 7.2). 
