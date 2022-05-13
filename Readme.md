@@ -396,7 +396,8 @@ mod front_of_house {
 
 
 
+
 # To Mark: Currently on Chapter 7.3
 most coding examples i've done are in Small_Practicals/src/main.rs
 ## Latest Changes:
-+ Understood the introduction to Libraries and Moules (read and copied 7.2). 
++ Understood the introduction to Libraries and Moules (read and copied 7.2).
