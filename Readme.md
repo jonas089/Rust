@@ -393,11 +393,29 @@ mod front_of_house {
     }
 }
 ```
+## Seperate a module into multiple files
+using
+```python
+<front_of_house.rs>
+pub mod hosting;
+```
+rather than
+```python
+<front_of_house.rs>
+pub mod hosting(){
+  pub fn add_to_waitlist(){}
+}
+
+-> <src/front_of_house/hosting.rs>
+pub fn add_to_waitlist(){
+  #...
+}
+
+```
+tells Rust to load the contents of the module from another file with the same name as the module.
 
 
-
-
-# To Mark: Currently on Chapter 7.3
+# To Mark: Currently on Chapter 8.1
 most coding examples i've done are in Small_Practicals/src/main.rs
 ## Latest Changes:
-+ Understood the introduction to Libraries and Moules (read and copied 7.2).
++ More or less finished Chapter 7. Still need to develop my understanding of Rust syntax and code structure. It'll take some time to get used to project management.
