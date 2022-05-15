@@ -491,7 +491,87 @@ Overwrite by inserting a different value for the same key.
 scores.entry(String::from("Yellow")).or_insert(60);
 ```
 
-# To Mark: Currently on Chapter 9.1
-most coding examples i've done are in Small_Practicals/src/main.rs
+# Chapter 9 - Error Handling
+
+## panic! ( Unrecoverable Error )
+```python
+fn main(){
+  panic!("crash and burn");
+}
+```
+
+Example where the vector library will panic:
+```python
+fn main(){
+  let v = vec![1,2,3];
+  v[100];
+}
+```
+-> keyerror
+## Result ( Recoverable Error )
+```python
+enum Result<T, E>{
+  Ok(T),
+  Err(E)
+}
+```
+
+Find the type of File::open("file.txt"):
+```python
+let f: u32 = File::open("file.txt");
+-> output: CompilerError -> "found enum "Result<File,std::io::Error>" "
+```
+Now use this information to handle a potential Error caused by File::open("filename"):
+```python
+use std::fs::File;
+
+fn main(){
+  let f = File::open("file.txt");
+
+  let f = match f {
+    Ok(file) => file,
+    Err(error) => panic!("Problem opening file: {:?}", error)
+  };
+}
+```
+Now we can match different types of Errors with ErrorKind from the io library:
+```python
+use std::fs::File;
+use std::io::ErrorKind;
+
+fn main(){
+  let f = File::open("file.txt");
+
+  let f = match f {
+    Ok(file) => file,
+    Err(error) => match error.kind(){
+      ErrorKind::NotFound => match File::create("file.txt"){
+        Ok(fc) => fc,
+        Err(e) => panic!("Problem creating file {:?}", e)
+      },
+      other_error => {
+        panic!("Problem opening the file {:?}", other_error)
+      }
+    }
+  };
+}
+```
+
+# Chapter 9 - Error Handling
+panic! and Result<T,E>
+There are several different ways of handling Errors in Rust and some coding experience is necessary to understand, when to choose which implementation.
+
+# Chapter 10 - Generic Types, Traits and Lifetimes
+TBA
+# Chapter 11 - Writing Automated Tests
+TBA
+# Chapter 12 - An I/O Project: Building a Command Line Program
+.root/minigrep Project.
+
+
+# To Mark: Currently on Chapter 12 / An I/O Project. Read through Chapters 9-11, trying to learn-by-doing. Will use chapters 9-11 as resources along the way.
+
+the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
+
 ## Latest Changes:
-+ Finished Chapter 8.
++ Read through Chapters 9-11 and began to work at the I/O Project ( Chapter 12 ).
