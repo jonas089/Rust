@@ -575,3 +575,6 @@ the smaller coding examples from the Rust book, that i've done are in Small_Prac
 
 ## Latest Changes:
 + Read through Chapters 9-11 and began to work at the I/O Project ( Chapter 12 ).
++ Finished 12.1 & 12.2, improved structure as stated in 12.3,
+currently still working in main.rs only. lib.rs is still to be
+introduced.
