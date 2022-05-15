@@ -569,7 +569,7 @@ TBA
 .root/minigrep Project.
 
 
-# To Mark: Currently on Chapter 12 / An I/O Project. Read through Chapters 9-11, trying to learn-by-doing. Will use chapters 9-11 as resources along the way.
+# To Mark: Currently on Chapter 12 / An I/O Project. Read through Chapters 9-11, trying to learn-by-doing. Will use chapters 9-11 as resources along the way. -> 12.3
 
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
