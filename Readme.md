@@ -414,8 +414,84 @@ pub fn add_to_waitlist(){
 ```
 tells Rust to load the contents of the module from another file with the same name as the module.
 
+# Chapter 8 - Common Collections
 
-# To Mark: Currently on Chapter 8.1
+## Storing Lists of Values with Vectors
+
+Instantiate a vector:
+```python
+let v: Vec<i32> = Vec::new(); # new vector
+let v2 = vec![1,2,3];
+v2.push(4);
+```
+Iterate over a mutable reference:
+```python
+let mut v = vec![100,32,57];
+for i in &mut v{
+  *i += 50; # add 50 to every element of the vector.
+}
+```
+
+## A vector can store only one type. To store multiple types, we use an Enumerator.
+
+Vector from enumerator:
+```python
+enum SpreadsheetCell{
+  Int(i32),
+  Float(f64),
+  Text(String)
+}
+
+let row = vec![
+  SpreadsheetCell::Int(3),
+  SpreadsheetCell::Text(String::from("text")),
+  SpreadsheetCell::Float(1.19)
+];
+```
+-> Rust needs to know all the types that are in the vector at compile time.
+
+## Hashmaps -> Very similar to a dictionary, makes dictionary obsolete.
+
+Define a hashmap:
+```python
+use std::collections::HashMap;
+let mut scores = HashMap.new();
+scores.insert(String::from("Host"), 1);
+scores.insert(String::from("Guest"), 1);
+```
+
+Construct a hashmap from two vectors, where vec1[n] is the key of the value vec2[n]:
+```python
+use std::collections::HashMap;
+let teams = vec![String::from("Blue"), String::from("Yellow")];
+let initial_scores = vec![10,50];
+
+let mut scores: Hashmap<_, _> = teams.into_iter().zip(initial_scores.into_iter()).collect();
+```
+
+## Accessing Values in a Hashmap
+```python
+let team_name = String::from("Blue");
+score = scores.get(&team_name);
+```
+### Using a for-loop
+```python
+let mut scores = HashMap::new();
+scores.insert(String::from("Blue"), 10);
+scores.insert(String::from("Yellow"), 20);
+
+for (key, value) in &scores{
+  println!("{}: {}", key, value);
+}
+```
+
+Overwrite by inserting a different value for the same key.
+## Check if a Key has a Value or not, if not, associate a value with it.
+```python
+scores.entry(String::from("Yellow")).or_insert(60);
+```
+
+# To Mark: Currently on Chapter 9.1
 most coding examples i've done are in Small_Practicals/src/main.rs
 ## Latest Changes:
-+ More or less finished Chapter 7. Still need to develop my understanding of Rust syntax and code structure. It'll take some time to get used to project management.
++ Finished Chapter 8.
