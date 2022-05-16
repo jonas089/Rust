@@ -30,6 +30,7 @@ impl Config {
 }
 */
 
+/*
 use std::env;
 use std::fs;
 use std::process;
@@ -75,6 +76,38 @@ fn run(config: Config) -> Result<(), Box<dyn Error>>{ // dynamic Error handling
     let contents = fs::read_to_string(config.filename)?;
     println!("With text:\n{}", contents);
     Ok(())
+    /*
+    We use if let rather than unwrap_or_else to check whether
+    run returns an Err value and call process::exit(1) if it does.
+    The run function doesn’t return a value that we want to unwrap
+    in the same way that Config::new returns the Config instance.
+    Because run returns () in the success case, we only care about detecting an error,
+    so we don’t need unwrap_or_else to return the unwrapped value because
+    it would only be ().
+    */
     // ? will return the error value from the current function for the caller to handle.
     // if the error is not handled, the compiler will throw a warning: note: this `Result` may be an `Err` variant, which should be handled
+}
+*/
+
+
+// Splitting the project up in lib.rs and main.rs
+use std::env;
+use std::process;
+
+use minigrep::Config;
+fn main(){
+    let args: Vec<String> = env::args().collect();
+    let config = Config::new(&args).unwrap_or_else(|err| {
+        println!("Problem parsing argument: {}", err);
+        process::exit(1);
+    });
+    println!("Searching for {}", config.query);
+    println!("In file {}", config.filename);
+
+    // handling the dynamic error from run()
+    if let Err(e) = minigrep::run(config){
+        println!("Application error: {}", e);
+        process::exit(1);
+    }
 }
