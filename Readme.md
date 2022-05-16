@@ -580,8 +580,12 @@ Read through this chapter, learning by doing through the IO Project
 # Chapter 12 - An I/O Project: Building a Command Line Program
 .root/minigrep Project.
  ## Environment variables in the powershell:
+  
+ ```python
  PS> $Env:CASE_INSENSITIVE=1; cargo run to poem.txt
  PS> Remove-Item Env:CASE_INSENSITIVE
+ ```
+  
  (suitable for example in minigrep project)
 
 
