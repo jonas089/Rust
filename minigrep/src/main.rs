@@ -100,13 +100,13 @@ use minigrep::Config;
 fn main(){
     let args: Vec<String> = env::args().collect();
     let config = Config::new(&args).unwrap_or_else(|err| {
-        println!("Problem parsing argument: {}", err);
+        eprintln!("Problem parsing argument: {}", err);
         process::exit(1);
     });
 
     // import the run function from lib.rs using minigrep::run
     if let Err(e) = minigrep::run(config){
-        println!("Application error: {}", e);
+        eprintln!("Application error: {}", e);
         process::exit(1);
     }
 }

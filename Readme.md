@@ -583,17 +583,18 @@ Read through this chapter, learning by doing through the IO Project
  PS> $Env:CASE_INSENSITIVE=1; cargo run to poem.txt
  PS> Remove-Item Env:CASE_INSENSITIVE
  (suitable for example in minigrep project)
- 
-  
+
+
 ## To be done:
 -
 -
 -
 
-# To Mark: Currently on Chapter 12.6
+# To Mark: Currently on Chapter 13.1
 
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
 ## Latest Changes:
-+ Finished 12.5
++ Finished 12.6 / done with Chapter 12
 + Understood how to set remove Environment variables in the powershell.
++ Understood output.txt and eprintln!
