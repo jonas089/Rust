@@ -94,8 +94,9 @@ fn run(config: Config) -> Result<(), Box<dyn Error>>{ // dynamic Error handling
 // Splitting the project up in lib.rs and main.rs
 use std::env;
 use std::process;
-
+// bring Config type from library in scope
 use minigrep::Config;
+
 fn main(){
     let args: Vec<String> = env::args().collect();
     let config = Config::new(&args).unwrap_or_else(|err| {
@@ -105,7 +106,7 @@ fn main(){
     println!("Searching for {}", config.query);
     println!("In file {}", config.filename);
 
-    // handling the dynamic error from run()
+    // import the run function from lib.rs using minigrep::run
     if let Err(e) = minigrep::run(config){
         println!("Application error: {}", e);
         process::exit(1);
