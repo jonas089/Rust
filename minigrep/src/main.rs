@@ -103,8 +103,6 @@ fn main(){
         println!("Problem parsing argument: {}", err);
         process::exit(1);
     });
-    println!("Searching for {}", config.query);
-    println!("In file {}", config.filename);
 
     // import the run function from lib.rs using minigrep::run
     if let Err(e) = minigrep::run(config){

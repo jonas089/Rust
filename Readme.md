@@ -562,17 +562,29 @@ panic! and Result<T,E>
 There are several different ways of handling Errors in Rust and some coding experience is necessary to understand, when to choose which implementation.
 
 # Chapter 10 - Generic Types, Traits and Lifetimes
-TBA
+## Lifetime
+```python
+&i32        // a reference
+&'a i32     // a reference with an explicit lifetime
+&'a mut i32 // a mutable reference with an explicit lifetime
+```
+if you want to declare a function where a result is being derived from an input, the input needs to stay in scope for as long as it is being worked with. For this you need to categorize it's lifetime.
+
+An Example for this syntax is in Small_Practicals.
+
+
 # Chapter 11 - Writing Automated Tests
-TBA
+Read through this chapter, learning by doing through the IO Project
+(Chapter 12) - see .root/minigrep // 12.4 - Developing the Library's Functionality with Test-Driven Deployment e.g.
+
 # Chapter 12 - An I/O Project: Building a Command Line Program
 .root/minigrep Project.
 
 
-# To Mark: Currently on Chapter 12 / An I/O Project. Read through Chapters 9-11, trying to learn-by-doing. Will use chapters 9-11 as resources along the way.
-# -> Now doing 12.4
+# To Mark: Currently on Chapter 12.4
 
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
 ## Latest Changes:
 + Finished 12.3
++ 12.4 Requires a better understanding of Chapter 10.3 - Lifetimes, so I reviewed Chapter 10

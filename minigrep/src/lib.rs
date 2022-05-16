@@ -23,3 +23,31 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     println!("With text:\n{}", contents);
     Ok(())
 }
+
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    // iterator
+    let mut results = Vec::new();
+    for line in contents.lines() {
+        if line.contains(query) {
+            // do something with line selected by iterator
+            results.push(line);
+        }
+    }
+    results // return results
+}
+
+#[cfg(test)]
+mod tests{
+    use super::*;
+
+    #[test]
+    fn on_result() {
+        let query = "duct";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.";
+        //Asserts that two expressions are equal to each other
+        assert_eq!(vec!["safe, fast, productive."], search(query, contents));
+    }
+}

@@ -400,6 +400,8 @@ fn move_player(num_spaces:u8){
 
 }
 */
+
+/*
 use std::io;
 fn main(){
 
@@ -415,4 +417,23 @@ fn main(){
         println!("The maximum is configured to be {}", max);
     }
     */
+}
+*/
+
+// Lifetime examples & testing
+
+fn main(){
+    let string1: String = String::from("abcd");
+    let string2: String = String::from("xyz");
+
+    let result: &str = longest(string1.as_str(), string2.as_str());
+    println!("The longest string is: {}", result);
+}
+
+fn longest<'a, 'b>(x: &'b str, y: &'b str) -> &'b str {
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
 }
