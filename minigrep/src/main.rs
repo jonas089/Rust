@@ -34,6 +34,8 @@ use std::env;
 use std::fs;
 use std::process;
 
+use std::error::Error;
+
 struct Config{
     query: String,
     filename: String
@@ -60,11 +62,19 @@ fn main(){
     });
     println!("Searching for {}", config.query);
     println!("In file {}", config.filename);
-    run(config);
+
+    // handling the dynamic error from run()
+    if let Err(e) = run(config){
+        println!("Application error: {}", e);
+        process::exit(1);
+    }
 }
 
-// To be done: handle errors in run() and escalate them to main()
-fn run(config: Config){
-    let contents = fs::read_to_string(config.filename).expect("Something went wrong reading the file");
+// !COMPLETED To be done: handle errors in run() and escalate them to main()
+fn run(config: Config) -> Result<(), Box<dyn Error>>{ // dynamic Error handling
+    let contents = fs::read_to_string(config.filename)?;
     println!("With text:\n{}", contents);
+    Ok(())
+    // ? will return the error value from the current function for the caller to handle.
+    // if the error is not handled, the compiler will throw a warning: note: this `Result` may be an `Err` variant, which should be handled
 }
