@@ -595,6 +595,5 @@ Read through this chapter, learning by doing through the IO Project
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
 ## Latest Changes:
-+ Finished 12.6 / done with Chapter 12
-+ Understood how to set remove Environment variables in the powershell.
-+ Understood output.txt and eprintln!
++ Started working on Chapter 13.1 // code of chapter 13 will be in .root/Chapter_13.
++ Understood the concept of closures and implemented a closure in .root/Chapter_13/main.rs

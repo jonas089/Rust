@@ -422,6 +422,7 @@ fn main(){
 
 // Lifetime examples & testing
 
+/*
 fn main(){
     let string1: String = String::from("abcd");
     let string2: String = String::from("xyz");
@@ -437,3 +438,6 @@ fn longest<'a, 'b>(x: &'b str, y: &'b str) -> &'b str {
         y
     }
 }
+*/
+
+
