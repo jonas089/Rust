@@ -579,19 +579,21 @@ Read through this chapter, learning by doing through the IO Project
 
 # Chapter 12 - An I/O Project: Building a Command Line Program
 .root/minigrep Project.
-
-
+ ## Environment variables in the powershell:
+ PS> $Env:CASE_INSENSITIVE=1; cargo run to poem.txt
+ PS> Remove-Item Env:CASE_INSENSITIVE
+ (suitable for example in minigrep project)
+ 
+  
 ## To be done:
 -
 -
 -
 
-# To Mark: Currently on Chapter 12.5
+# To Mark: Currently on Chapter 12.6
 
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
 ## Latest Changes:
-+ Finished 12.4
-+ Reviewed Chapter 10.3
-+ Watched a video on Lifetime for better understanding
-+ Revised "Automated testing"
++ Finished 12.5
++ Understood how to set remove Environment variables in the powershell.
