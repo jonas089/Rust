@@ -589,6 +589,20 @@ Read through this chapter, learning by doing through the IO Project
  (suitable for example in minigrep project)
 
 
+# Chapter 13
+
+## Closures - The topic seems to not be covered well by the book, so additional source are used for a better understanding.
+
+### A simple definition of what a closure is and does:
+```text
+According to The Book, closure is an anonymous function that can capture its environment. There are two things that have to be highlighted in this definition:
+
+A closure can be imagined like a function;
+Contrary to a function, it can capture its environment (capturing the environment means that in a closure you can use the variables defined outside the closure body but accessible in its scope).
+more: https://zhauniarovich.com/post/2020/2020-12-closures-in-rust/
+```
+
+
 ## To be done:
 -
 -
@@ -599,5 +613,4 @@ Read through this chapter, learning by doing through the IO Project
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
 ## Latest Changes:
-+ Started working on Chapter 13.1 // code of chapter 13 will be in .root/Chapter_13.
-+ Understood the concept of closures and implemented a closure in .root/Chapter_13/main.rs
+
