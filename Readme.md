@@ -581,10 +581,14 @@ Read through this chapter, learning by doing through the IO Project
 .root/minigrep Project.
 
 
-# To Mark: Currently on Chapter 12.4
+## To be done:
+- Revise cargo test, to know what is being called. Currently it seems that cargo test runs a test function in the lib.rs, but it's not clear why?
+
+# To Mark: Currently on Chapter 12.5
 
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
 ## Latest Changes:
-+ Finished 12.3
-+ 12.4 Requires a better understanding of Chapter 10.3 - Lifetimes, so I reviewed Chapter 10
++ Finished 12.4
++ Reviewed Chapter 10.3
++ Watched a video on Lifetime for better understanding
