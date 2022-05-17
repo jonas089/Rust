@@ -644,14 +644,15 @@ Example:
 ```
 
 ## To be done:
--
--
--
+- Learn more about lifetime.
+- Research some syntax misunderstandings and develop a better understanding of Generic types.
+- Review Ownership and copies.
 
-# To Mark: Currently on Chapter 13.1
+# To Mark: Currently on Chapter 13.2
 
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
 ## Latest Changes:
 
-+ Continued to work with Closures / Chapter 13.1 and achieved a better understanding of the topic.
++ I struggled with Chapter 13.1, syntax and in particular lifetime are quite difficult to get used to and I don't yet fully understand either. However, I do see some progress.
++ Completed Chapter 13.1
