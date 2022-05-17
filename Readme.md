@@ -595,11 +595,14 @@ Read through this chapter, learning by doing through the IO Project
 
 ### A simple definition of what a closure is and does:
 ```text
-According to The Book, closure is an anonymous function that can capture its environment. There are two things that have to be highlighted in this definition:
+According to The Book, closure is an
+anonymous function that can capture its environment.
+There are two things that have to be highlighted in
+this definition:
 
 A closure can be imagined like a function;
-Contrary to a function, it can capture its environment (capturing the environment means that in a closure you can use the variables defined outside the closure body but accessible in its scope).
-more: https://zhauniarovich.com/post/2020/2020-12-closures-in-rust/
+Contrary to a function, it can capture its
+environment (capturing the environment means that in a closure you can use the variables defined outside the closure body but accessible in its scope).
 ```
 ### Make use of closures so a function isn't called in cases where it's output value may not be used.
 Example:
@@ -620,7 +623,7 @@ Example:
             "Next, do {} situps",
             expensive_result(intensity)
         );
-    } 
+    }
     else{
         if random_number == 3{
             # in this case we don't want to run the expensive calculation,
