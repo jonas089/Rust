@@ -604,6 +604,9 @@ A closure can be imagined like a function;
 Contrary to a function, it can capture its
 environment (capturing the environment means that in a closure you can use the variables defined outside the closure body but accessible in its scope).
 ```
+
+more: https://zhauniarovich.com/post/2020/2020-12-closures-in-rust/
+
 ### Make use of closures so a function isn't called in cases where it's output value may not be used.
 Example:
 ```python
