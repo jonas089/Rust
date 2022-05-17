@@ -601,7 +601,41 @@ A closure can be imagined like a function;
 Contrary to a function, it can capture its environment (capturing the environment means that in a closure you can use the variables defined outside the closure body but accessible in its scope).
 more: https://zhauniarovich.com/post/2020/2020-12-closures-in-rust/
 ```
+### Make use of closures so a function isn't called in cases where it's output value may not be used.
+Example:
+```python
+    let expensive_result = |intensity|{
+        println!("calculating slowly...");
+        thread::sleep(Duration::from_secs(2));
+        intensity // return intensity
+    };
 
+
+    if intensity < 25{
+        println!(
+            "Today, do {} pushups",
+            expensive_result(intensity)
+        );
+        println!(
+            "Next, do {} situps",
+            expensive_result(intensity)
+        );
+    } 
+    else{
+        if random_number == 3{
+            # in this case we don't want to run the expensive calculation,
+            # which is basically the reason we will implement a closure.
+            println!("Take a break today! Remember to stay hydrated!");
+        }
+        else{
+            println!(
+                "Today, run for {} minutes",
+                expensive_result(intensity)
+            );
+        }
+    }
+}
+```
 
 ## To be done:
 -
@@ -614,3 +648,4 @@ the smaller coding examples from the Rust book, that i've done are in Small_Prac
 
 ## Latest Changes:
 
++ Continued to work with Closures / Chapter 13.1 and achieved a better understanding of the topic.
