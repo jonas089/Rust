@@ -655,6 +655,7 @@ https://www.youtube.com/c/LetsGetRusty/videos
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
 ## Latest Changes:
++ Added a directory for the Lets_Get_Rusty youtube tutorial series. The Series basically covers the book, however, I'll definitely finish both. The programmer's perspective has proven very useful in achieving a better understanding of syntax so far and I'm slowly building up some confidence in Rust.
 + Began to work on Chapter 13.2, which is much easier than 13.1. Iterator examples in Chapter_13 main.rs.
 
 + I struggled with Chapter 13.1, syntax and in particular lifetime are quite difficult to get used to and I don't yet fully understand either. However, I do see some progress.
