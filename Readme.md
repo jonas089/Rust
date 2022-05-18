@@ -644,7 +644,7 @@ Example:
 ```
 
 ## To be done:
-- Learn more about lifetime.
+- Learn even more about lifetime. ( most resources I found provide poor information, some claim the only reason for declaring a lifetime is to satisfy the compiler, but I have a feeling there is more to it. )
 - Research some syntax misunderstandings and develop a better understanding of Generic types.
 - Review Ownership and copies.
 
@@ -653,6 +653,7 @@ Example:
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
 ## Latest Changes:
++ Began to work on Chapter 13.2, which is much easier than 13.1. Iterator examples in Chapter_13 main.rs.
 
 + I struggled with Chapter 13.1, syntax and in particular lifetime are quite difficult to get used to and I don't yet fully understand either. However, I do see some progress.
-+ Completed Chapter 13.1
++ Completed Chapter 13.1 

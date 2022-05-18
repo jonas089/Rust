@@ -70,7 +70,7 @@ for (key, value) in &scores{
 
 */
 
-
+/*
 use std::thread;
 use std::time::Duration;
 use std::collections::HashMap;
@@ -183,4 +183,32 @@ fn call_with_different_values(){
     let v2 = c.values(&ii);
     println!("V1: {}", v1);
     println!("V2: {}", v2);
+}
+*/
+use std::io;
+fn main(){
+    let v1 = vec![1,2,3];
+    let v1_iter = v1.iter();
+
+    for val in v1_iter{
+        println!("Got: {}", val);
+    }
+}
+#[test]
+fn iterator_demonstration(){
+    let v1 = vec![1,2,3];
+    let mut v1_iter = v1.iter();
+    assert_eq!(v1_iter.next(), Some(&1));
+    assert_eq!(v1_iter.next(), Some(&2));
+    assert_eq!(v1_iter.next(), Some(&3));
+    let g = assert_eq!(v1_iter.next(), None);
+    println!("{:?}", g);
+}
+#[test]
+fn iterator_sum(){
+    // returns sum of all num elements in a vector
+    let v1 = vec![1,2,3];
+    let v1_iter = v1.iter();
+    let total: i32 = v1_iter.sum();
+    assert_eq!(total, 6);
 }
