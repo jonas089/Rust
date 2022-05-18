@@ -648,7 +648,9 @@ Example:
 - Research some syntax misunderstandings and develop a better understanding of Generic types.
 - Review Ownership and copies.
 
-# To Mark: Currently on Chapter 13.2
+# To Mark: Currently on Chapter 13.2 & Currently doing this tutorial series on youtube ( on video #5 - Understanding Ownership in Rust):
+https://www.youtube.com/c/LetsGetRusty/videos
+
 
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
