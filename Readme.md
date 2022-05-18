@@ -648,15 +648,24 @@ Example:
 - Research some syntax misunderstandings and develop a better understanding of Generic types.
 - Review Ownership and copies.
 
-# To Mark: Currently on Chapter 13.2 & Currently doing this tutorial series on youtube ( on video #5 - Understanding Ownership in Rust):
+# To Mark: Currently on Chapter 13.2):
 https://www.youtube.com/c/LetsGetRusty/videos
+
+### Video series progress
++ finished Hello World
++ finished Getting Started
++ finished Guessing Game in Rust
++ finished Common Programming Concepts in Rust
++ finished Understanding Ownership in Rust
++ finished Structs in Rust
+
 
 
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
 ## Latest Changes:
-+ Added a directory for the Lets_Get_Rusty youtube tutorial series. The Series basically covers the book, however, I'll definitely finish both. The programmer's perspective has proven very useful in achieving a better understanding of syntax so far and I'm slowly building up some confidence in Rust.
-+ Began to work on Chapter 13.2, which is much easier than 13.1. Iterator examples in Chapter_13 main.rs.
++ Developed a decent understanding of ownership and basic syntax. I understand most of the material covered so far and I'm going to stick with the video series for a few days, to then continue with the Rust book with increased efficiency and more underlaying knowledge.
 
-+ I struggled with Chapter 13.1, syntax and in particular lifetime are quite difficult to get used to and I don't yet fully understand either. However, I do see some progress.
-+ Completed Chapter 13.1 
++ Repeated a few tasks from Chapter 5 in Lets_Get_Rusty, following the video series.
+
++ Added a directory for the Lets_Get_Rusty youtube tutorial series. The Series basically covers the book, however, I'll definitely finish both. The programmer's perspective has proven very useful in achieving a better understanding of syntax so far and I'm slowly building up some confidence in Rust.

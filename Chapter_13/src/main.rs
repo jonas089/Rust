@@ -70,7 +70,6 @@ for (key, value) in &scores{
 
 */
 
-/*
 use std::thread;
 use std::time::Duration;
 use std::collections::HashMap;
@@ -184,7 +183,9 @@ fn call_with_different_values(){
     println!("V1: {}", v1);
     println!("V2: {}", v2);
 }
-*/
+
+
+/*
 use std::io;
 fn main(){
     let v1:Vec<i32> = vec![1,2,3];
@@ -210,3 +211,4 @@ fn iterator_sum(){
     let total: i32 = v1_iter.sum();
     assert_eq!(total, 6);
 }
+*/
