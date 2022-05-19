@@ -8,20 +8,37 @@ fn dangle() -> &String{
 }
 */
 
+struct Rectangle{
+    width: u32,
+    height: u32
+}
+impl Rectangle{
+    fn area(&self) -> u32{
+        self.width * self.height
+    }
+    fn can_hold(&self, other:Rectangle) -> bool{
+        self.width > other.width && self.height > other.height
+    }
+}
+
 fn main(){
-    let width1 = 30;
-    let height1 = 50;
+    let rect:Rectangle = Rectangle{
+        width: 30,
+        height: 30
+    };
+
+    let smaller_rect: Rectangle = Rectangle{
+        width:20,
+        height:20
+    };
+
+    println!("{:?}", rect.can_hold(smaller_rect));
 
     println!(
-        "The area of the rectangle is {} square pixels",
-        area(width1, height1)
+        "{:?}",
+        rect.area()
     );
 }
-fn area(width:u32, height:u32) -> u32{
-    width * height
-}
-
-
 
 
 

@@ -439,5 +439,24 @@ fn longest<'a, 'b>(x: &'b str, y: &'b str) -> &'b str {
     }
 }
 */
+fn main(){
 
+}
+fn messing_with_lifetime<'a>(x: &str, y: &str, b: bool) -> String{
+    if b == true{
+        x.to_string()
+    }
+    else{
+        y.to_string()
+    }
+}
+#[test]
+fn call_tests(){
+    let b: bool = true;
+    let x: String = String::from("Anything");
+    let y: String = String::from("Nothing");
+    assert_eq!(String::from("Anything"), messing_with_lifetime(&x, &y, b));
+    let b: bool = false;
+    assert_eq!(String::from("Nothing"), messing_with_lifetime(&x, &y, b));
+}
 
