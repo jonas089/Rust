@@ -670,6 +670,9 @@ let a = match args.next(){
 2. "Rust Programming - The Complete Guide" - 8.5 hour course length 
 (0%) Complete
 
+3. "Rust Programming Masterclass - From Beginner to Expert" - 13 hour course length
+(0%) Complete
+
 ## Latest Changes:
 + Bought several Udemy courses, as there is currently a huge sale and the quality exceeds some of the youtube material I used before.
 + Finished Chapter 13
