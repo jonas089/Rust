@@ -661,7 +661,7 @@ let a = match args.next(){
 - Research some syntax misunderstandings and develop a better understanding of Generic types.
 - Review Ownership and copies.
 
-# To Mark: Currently on Chapter 14):
+# To Mark: Currently on Chapter 14:
 
 # Udemy Course Progress
 ```text
