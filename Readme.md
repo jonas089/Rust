@@ -661,23 +661,15 @@ let a = match args.next(){
 - Research some syntax misunderstandings and develop a better understanding of Generic types.
 - Review Ownership and copies.
 
-# To Mark: Currently on Chapter 13.4):
-https://www.youtube.com/c/LetsGetRusty/videos
+# To Mark: Currently on Chapter 14):
 
-### Video series progress
-+ finished Hello World
-+ finished Getting Started
-+ finished Guessing Game in Rust
-+ finished Common Programming Concepts in Rust
-+ finished Understanding Ownership in Rust
-+ finished Structs in Rust
+# Udemy Course Progress
+1. "Ultimate Rust Crash Course" - 3 hour course length
+(20%) Complete
 
-
-
-the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
+2. "Rust Programming - The Complete Guide" - 8.5 hour course length 
+(0%) Complete
 
 ## Latest Changes:
-+ Finished Chapter 13.2 & 13.3
-+ Worked on a small ETH problem with a friend, who is studying Engineering, which was about Smart Pointers in C++ and is therefore a preperation for Chapter 15 in the Rust book.
-+ Understood next() on Iterators, implemented knowledge to update minigrep project & 
-understood that Args holds an impl Iterator, meaning next() can be called on env::Args type.
++ Bought several Udemy courses, as there is currently a huge sale and the quality exceeds some of the youtube material I used before.
++ Finished Chapter 13
