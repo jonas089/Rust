@@ -643,6 +643,19 @@ Example:
 }
 ```
 
+## Iterators
+Use next() for iteration of an instance:
+```python
+args.next(); #skip
+
+let a = match args.next(){
+  Some(arg) => arg,
+  None => return Err("Didn't get a query string")
+};
+```
+
+
+
 ## To be done:
 - Learn even more about lifetime. ( most resources I found provide poor information, some claim the only reason for declaring a lifetime is to satisfy the compiler, but I have a feeling there is more to it. )
 - Research some syntax misunderstandings and develop a better understanding of Generic types.
