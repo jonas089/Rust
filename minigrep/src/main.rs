@@ -98,15 +98,22 @@ use std::process;
 use minigrep::Config;
 
 fn main(){
-    let args: Vec<String> = env::args().collect();
+    /*let args: Vec<String> = env::args().collect();
     let config = Config::new(&args).unwrap_or_else(|err| {
         eprintln!("Problem parsing argument: {}", err);
         process::exit(1);
+    });*/
+    let config = Config::new(env::args()).unwrap_or_else(|err| {
+        eprintln!("Problem parsing arguments: {}", err);
+        process::exit(1);
     });
+
 
     // import the run function from lib.rs using minigrep::run
     if let Err(e) = minigrep::run(config){
         eprintln!("Application error: {}", e);
         process::exit(1);
     }
+
+    
 }

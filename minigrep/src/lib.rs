@@ -8,7 +8,7 @@ pub struct Config {
     pub case_sensitive: bool
 }
 impl Config {
-    pub fn new(args: &[String]) -> Result<Config, &'static str> {
+    /*pub fn new(args: &[String]) -> Result<Config, &'static str> {
         if args.len() < 3 {
             return Err("not enough arguments");
         }
@@ -18,6 +18,29 @@ impl Config {
         let case_sensitive = env::var("CASE_INSENSITIVE").is_err();
         Ok(Config { 
             query, 
+            filename,
+            case_sensitive
+        })
+    }*/
+    // Args impl Iterator, iterator holds fn next() => next() can be called on Args instance
+    pub fn new(mut args: env::Args) -> Result<Config, &'static str>{
+        args.next(); // skip index 0, as there is a target stored in it.
+        println!("{:?}", args);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+        let query = match args.next(){
+            Some(arg) => arg,
+            None => return Err("Didn't get a query string")
+        };
+
+        let filename = match args.next(){
+            Some(arg) => arg,
+            None => return Err("Didn't get a valid filename")
+        };
+
+        let case_sensitive = env::var("CASE_INSENSITIVE").is_err();
+
+        Ok(Config{
+            query,
             filename,
             case_sensitive
         })

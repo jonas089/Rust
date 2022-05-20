@@ -69,7 +69,7 @@ for (key, value) in &scores{
 }
 
 */
-
+/*
 use std::thread;
 use std::time::Duration;
 use std::collections::HashMap;
@@ -183,7 +183,7 @@ fn call_with_different_values(){
     println!("V1: {}", v1);
     println!("V2: {}", v2);
 }
-
+*/
 
 /*
 use std::io;
@@ -212,3 +212,7 @@ fn iterator_sum(){
     assert_eq!(total, 6);
 }
 */
+
+fn main(){
+    
+}

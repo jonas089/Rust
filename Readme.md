@@ -648,7 +648,7 @@ Example:
 - Research some syntax misunderstandings and develop a better understanding of Generic types.
 - Review Ownership and copies.
 
-# To Mark: Currently on Chapter 13.2):
+# To Mark: Currently on Chapter 13.4):
 https://www.youtube.com/c/LetsGetRusty/videos
 
 ### Video series progress
@@ -664,8 +664,7 @@ https://www.youtube.com/c/LetsGetRusty/videos
 the smaller coding examples from the Rust book, that i've done are in Small_Practicals/src/main.rs
 
 ## Latest Changes:
-+ Developed a decent understanding of ownership and basic syntax. I understand most of the material covered so far and I'm going to stick with the video series for a few days, to then continue with the Rust book with increased efficiency and more underlaying knowledge.
-
-+ Repeated a few tasks from Chapter 5 in Lets_Get_Rusty, following the video series.
-
-+ Added a directory for the Lets_Get_Rusty youtube tutorial series. The Series basically covers the book, however, I'll definitely finish both. The programmer's perspective has proven very useful in achieving a better understanding of syntax so far and I'm slowly building up some confidence in Rust.
++ Finished Chapter 13.2 & 13.3
++ Worked on a small ETH problem with a friend, who is studying Engineering, which was about Smart Pointers in C++ and is therefore a preperation for Chapter 15 in the Rust book.
++ Understood next() on Iterators, implemented knowledge to update minigrep project & 
+understood that Args holds an impl Iterator, meaning next() can be called on env::Args type.
