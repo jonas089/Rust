@@ -666,7 +666,7 @@ let a = match args.next(){
 # Udemy Course Progress
 ```text
 1. "Ultimate Rust Crash Course" - 3 hour course length
-(20%) Complete
+(51%) Complete
 
 2. "Rust Programming - The Complete Guide" - 8.5 hour course length
 (0%) Complete
@@ -676,5 +676,4 @@ let a = match args.next(){
 ```
 
 ## Latest Changes:
-+ Bought several Udemy courses, as there is currently a huge sale and the quality exceeds some of the youtube material I used before.
-+ Finished Chapter 13
++ Have to take a break from Programming, as I have a math exam on the 26th of May, a Physics exam on the 31st of May and another math exam on the 1st of June. Will likely get back to Rust on the 2nd of July.
