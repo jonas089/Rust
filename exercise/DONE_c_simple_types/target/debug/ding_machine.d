@@ -1,0 +1,1 @@
+C:\Users\Surfa\Desktop\Crash_Course\exercise\c_simple_types\target\debug\ding_machine.exe: C:\Users\Surfa\Desktop\Crash_Course\exercise\c_simple_types\src\lib.rs C:\Users\Surfa\Desktop\Crash_Course\exercise\c_simple_types\src\main.rs

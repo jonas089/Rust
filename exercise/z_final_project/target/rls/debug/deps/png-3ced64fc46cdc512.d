@@ -1,0 +1,14 @@
+c:\Users\Surfa\Desktop\Crash_Course\exercise\z_final_project\target\rls\debug\deps\png-3ced64fc46cdc512.rmeta: C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\lib.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\chunk.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\crc.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\decoder\mod.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\decoder\stream.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\encoder.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\filter.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\traits.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\common.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\utils.rs
+
+c:\Users\Surfa\Desktop\Crash_Course\exercise\z_final_project\target\rls\debug\deps\png-3ced64fc46cdc512.d: C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\lib.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\chunk.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\crc.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\decoder\mod.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\decoder\stream.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\encoder.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\filter.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\traits.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\common.rs C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\utils.rs
+
+C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\lib.rs:
+C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\chunk.rs:
+C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\crc.rs:
+C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\decoder\mod.rs:
+C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\decoder\stream.rs:
+C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\encoder.rs:
+C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\filter.rs:
+C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\traits.rs:
+C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\common.rs:
+C:\Users\Surfa\.cargo\registry\src\github.com-1ecc6299db9ec823\png-0.14.1\src\utils.rs:
