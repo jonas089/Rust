@@ -654,6 +654,8 @@ let a = match args.next(){
 };
 ```
 
+# Chapter 14
+
 
 
 ## To be done:
@@ -666,7 +668,7 @@ let a = match args.next(){
 # Udemy Course Progress
 ```text
 1. "Ultimate Rust Crash Course" - 3 hour course length
-(72%) Complete
+(82%) Complete - Reached the "final project", - space invaders console game in Rust.
 
 2. "Rust Programming - The Complete Guide" - 8.5 hour course length
 (0%) Complete
@@ -676,4 +678,6 @@ let a = match args.next(){
 ```
 
 ## Latest Changes:
-+ Have to take a break from Programming, as I have a math exam on the 26th of May, a Physics exam on the 31st of May and another math exam on the 1st of June. Last exam will be 15th of June.
++ Prepared to continue working on Chapter 14
++ Doing Udemy tutorials whenever I can.
++ Last Exam in School: 15th of June

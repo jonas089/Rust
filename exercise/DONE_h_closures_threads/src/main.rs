@@ -16,8 +16,8 @@ fn expensive_sum(v: Vec<i32>) -> i32 {
     // either need to dereference the argument once in the parameter list like this: `|&x|` or you
     // will need to dereference it each time you use it in the expression like this: `*x`
     v.iter()
-        // .filter() goes here
-        // .map() goes here
+        .filter(|x| *x % 2 == 0)
+        .map(|&x| x*x)
         .sum()
 }
 
@@ -26,20 +26,24 @@ fn pause_ms(ms: u64) {
 }
 
 fn main() {
+    /*
     let my_vector = vec![2, 5, 1, 0, 4, 3];
-
+    let handle = thread::spawn(move || {
+        expensive_sum(my_vector)
+    });
+    let sum = handle.join();
+    println!("{:?}", sum);
     // 2. Spawn a child thread and have it call `expensive_sum(my_vector)`.  Store the returned
     // join handle in a variable called `handle`. Once you've done this you should be able to run
     // the code and see the Child thread output in the middle of the main thread's letters
     //
     //let handle = ...
-
     // While the child thread is running, the main thread will also do some work
     for letter in vec!["a", "b", "c", "d", "e", "f"] {
         println!("Main thread: Letter {}", letter);
         pause_ms(200);
-    }
-
+    }*/
+    
     // 3. Let's retrieve the value returned by the child thread once it has exited.  Using the
     // `handle` variable you stored the join handle in earlier, call .join() to wait for the thread
     // to exit with a `Result<i32, Err>`.  Get the i32 out of the result and store it in a `sum`
@@ -56,14 +60,14 @@ fn main() {
     // flow of execution works.  Once you understand it, alter the values passed to the `pause_ms()`
     // calls so that both the "Thread B" outputs occur before the "Thread A" outputs.
 
-    /*
+    
     let (tx, rx) = channel::unbounded();
     // Cloning a channel makes another variable connected to that end of the channel so that you can
     // send it to another thread.
     let tx2 = tx.clone();
 
     let handle_a = thread::spawn(move || {
-        pause_ms(0);
+        pause_ms(1000);
         tx2.send("Thread A: 1").unwrap();
         pause_ms(200);
         tx2.send("Thread A: 2").unwrap();
@@ -89,7 +93,7 @@ fn main() {
     // Join the child threads for good hygiene.
     handle_a.join().unwrap();
     handle_b.join().unwrap();
-    */
+    
 
     // Challenge: Make two child threads and give them each a receiving end to a channel.  From the
     // main thread loop through several values and print each out and then send it to the channel.
